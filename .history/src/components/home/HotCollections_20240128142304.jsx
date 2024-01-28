@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AuthorImage from "../../images/author_thumbnail.jpg";
 import nftImage from "../../images/nftImage.jpg";
+import Slider from "react-slick";
+
 
 const HotCollections = () => {
 
@@ -18,7 +20,14 @@ const HotCollections = () => {
     fetchProducts()
   }, [])
 
-  
+  render() {;
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
 
   return (
     <section id="section-collections" className="no-bottom">

@@ -8,6 +8,11 @@ import axios from "axios";
 
 const Explore = () => {
 
+  const[products, showProducts] = useState([])
+  
+  async function fetchProducts(
+
+  )
   
 
   useEffect(() => {
@@ -42,7 +47,7 @@ const Explore = () => {
         <section aria-label="section">
           <div className="container">
             <div className="row">
-              <ExploreItems  />
+              <ExploreItems />
             </div>
           </div>
         </section>

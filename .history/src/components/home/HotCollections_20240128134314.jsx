@@ -18,8 +18,6 @@ const HotCollections = () => {
     fetchProducts()
   }, [])
 
-  
-
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
@@ -48,7 +46,7 @@ const HotCollections = () => {
                   <Link to="/explore">
                     <h4>{product.title}</h4>
                   </Link>
-                  <span>ERC-{product.code}</span>
+                  <span>ERC-</span>
                 </div>
               </div>
             </div>

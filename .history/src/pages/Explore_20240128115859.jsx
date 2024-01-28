@@ -2,14 +2,13 @@ import React, { useEffect } from "react";
 import SubHeader from "../images/subheader.jpg";
 import ExploreItems from "../components/explore/ExploreItems";
 import { useState } from "react";
-import axios from "axios";
 
 
 
 const Explore = () => {
 
-  
 
+  
   useEffect(() => {
     window.scrollTo(0, 0);
     // Does this work
@@ -42,7 +41,7 @@ const Explore = () => {
         <section aria-label="section">
           <div className="container">
             <div className="row">
-              <ExploreItems  />
+              <ExploreItems />
             </div>
           </div>
         </section>

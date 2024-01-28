@@ -8,6 +8,8 @@ import axios from "axios";
 
 const Explore = () => {
 
+  const[products, showProducts] = useState([])
+  const data = axios.get('https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections')
   
 
   useEffect(() => {
@@ -42,7 +44,7 @@ const Explore = () => {
         <section aria-label="section">
           <div className="container">
             <div className="row">
-              <ExploreItems  />
+              <ExploreItems />
             </div>
           </div>
         </section>

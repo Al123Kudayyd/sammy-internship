@@ -8,7 +8,13 @@ import axios from "axios";
 
 const Explore = () => {
 
+  const[products, showProducts] = useState([])
   
+  async function fetchProducts(
+    
+  )
+  const data = axios.get('https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections')
+  console.log(data)
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -42,7 +48,7 @@ const Explore = () => {
         <section aria-label="section">
           <div className="container">
             <div className="row">
-              <ExploreItems  />
+              <ExploreItems />
             </div>
           </div>
         </section>

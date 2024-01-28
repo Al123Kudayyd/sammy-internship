@@ -18,8 +18,6 @@ const HotCollections = () => {
     fetchProducts()
   }, [])
 
-  
-
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
@@ -40,15 +38,15 @@ const HotCollections = () => {
                 </div>
                 <div className="nft_coll_pp">
                   <Link to="/author">
-                    <img className="lazy pp-coll" src={product.authorImage} alt="" />
+                    <img className="lazy pp-coll" src={AuthorImage} alt="" />
                   </Link>
                   <i className="fa fa-check"></i>
                 </div>
                 <div className="nft_coll_info">
                   <Link to="/explore">
-                    <h4>{product.title}</h4>
+                    <h4>Pinky Ocean</h4>
                   </Link>
-                  <span>ERC-{product.code}</span>
+                  <span>ERC-192</span>
                 </div>
               </div>
             </div>

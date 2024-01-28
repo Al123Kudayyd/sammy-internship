@@ -18,8 +18,6 @@ const HotCollections = () => {
     fetchProducts()
   }, [])
 
-  
-
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
@@ -31,24 +29,25 @@ const HotCollections = () => {
             </div>
           </div>
           {products.map((product) => (
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={index}>
               <div className="nft_coll">
                 <div className="nft_wrap">
                   <Link to="/item-details">
-                    <img src={product.nftImage} className="lazy img-fluid" alt="" />
+                    <img src={product.nftImage
+} className="lazy img-fluid" alt="" />
                   </Link>
                 </div>
                 <div className="nft_coll_pp">
                   <Link to="/author">
-                    <img className="lazy pp-coll" src={product.authorImage} alt="" />
+                    <img className="lazy pp-coll" src={AuthorImage} alt="" />
                   </Link>
                   <i className="fa fa-check"></i>
                 </div>
                 <div className="nft_coll_info">
                   <Link to="/explore">
-                    <h4>{product.title}</h4>
+                    <h4>Pinky Ocean</h4>
                   </Link>
-                  <span>ERC-{product.code}</span>
+                  <span>ERC-192</span>
                 </div>
               </div>
             </div>

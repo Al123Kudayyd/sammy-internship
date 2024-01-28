@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import AuthorImage from "../../images/author_thumbnail.jpg";
 import nftImage from "../../images/nftImage.jpg";
 
+
 const HotCollections = () => {
 
   const[products, showProducts] = useState([])
@@ -17,8 +18,6 @@ const HotCollections = () => {
   useEffect(() => {
     fetchProducts()
   }, [])
-
-  
 
   return (
     <section id="section-collections" className="no-bottom">

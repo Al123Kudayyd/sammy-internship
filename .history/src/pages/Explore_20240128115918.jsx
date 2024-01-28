@@ -8,7 +8,8 @@ import axios from "axios";
 
 const Explore = () => {
 
-  
+  const[products, showProducts] = useState()
+  const data = axios
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -42,7 +43,7 @@ const Explore = () => {
         <section aria-label="section">
           <div className="container">
             <div className="row">
-              <ExploreItems  />
+              <ExploreItems />
             </div>
           </div>
         </section>

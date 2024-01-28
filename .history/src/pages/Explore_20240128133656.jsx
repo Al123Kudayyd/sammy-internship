@@ -8,7 +8,17 @@ import axios from "axios";
 
 const Explore = () => {
 
+  const[products, showProducts] = useState([])
   
+  async function fetchProducts() {
+    const {data} = await axios.get('https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections')
+    console.log(data)
+    
+  }
+  
+  useEffect(() => {
+    fetchProducts()
+  }, [])
 
   useEffect(() => {
     window.scrollTo(0, 0);
