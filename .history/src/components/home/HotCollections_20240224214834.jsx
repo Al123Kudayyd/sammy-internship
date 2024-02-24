@@ -21,7 +21,7 @@ const HotCollections = () => {
     fetchProducts()
   }, [])
   
-  
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.

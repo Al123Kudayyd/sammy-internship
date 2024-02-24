@@ -21,7 +21,6 @@ const HotCollections = () => {
     fetchProducts()
   }, [])
   
-  
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -52,8 +51,9 @@ const HotCollections = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-          <Carousel responsive={responsive}>
+          
           {products.map((product) => (
+            <Carousel responsive={responsive}>
             <div  className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
               <div className="nft_coll">
                 <div className="nft_wrap">

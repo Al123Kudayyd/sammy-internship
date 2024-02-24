@@ -21,7 +21,6 @@ const HotCollections = () => {
     fetchProducts()
   }, [])
   
-  
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -60,7 +59,6 @@ const HotCollections = () => {
                   <Link to="/item-details">
                     <img src={product.nftImage} className="lazy img-fluid" alt="" />
                   </Link>
-                  
                 </div>
                 <div className="nft_coll_pp">
                   <Link to="/author">

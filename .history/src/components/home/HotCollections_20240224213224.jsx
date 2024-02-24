@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import AuthorImage from "../../images/author_thumbnail.jpg";
 import nftImage from "../../images/nftImage.jpg";
 import Slider from "react-slick";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+
 
 const HotCollections = () => {
 
@@ -21,27 +20,14 @@ const HotCollections = () => {
     fetchProducts()
   }, [])
   
-  
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  }
+  // does this work?
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
@@ -52,7 +38,6 @@ const HotCollections = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-          <Carousel responsive={responsive}>
           {products.map((product) => (
             <div  className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
               <div className="nft_coll">
@@ -77,7 +62,6 @@ const HotCollections = () => {
               </div>
             </div>
           ))}
-          </Carousel>
         </div>
       </div>
     </section>
