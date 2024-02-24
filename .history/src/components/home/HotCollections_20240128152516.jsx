@@ -28,7 +28,7 @@ const HotCollections = () => {
     slidesToShow: 1,
     slidesToScroll: 1
   }
-  // does this work?
+
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
@@ -41,12 +41,11 @@ const HotCollections = () => {
           </div>
           {products.map((product) => (
             <div  className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-              <div className="nft_coll">
+              <Slider {} className="nft_coll">
                 <div className="nft_wrap">
                   <Link to="/item-details">
                     <img src={product.nftImage} className="lazy img-fluid" alt="" />
                   </Link>
-                  
                 </div>
                 <div className="nft_coll_pp">
                   <Link to="/author">
@@ -60,7 +59,7 @@ const HotCollections = () => {
                   </Link>
                   <span>ERC-{product.code}</span>
                 </div>
-              </div>
+              </Slider>
             </div>
           ))}
         </div>

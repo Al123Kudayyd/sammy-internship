@@ -6,8 +6,16 @@ import nftImage from "../../images/nftImage.jpg";
 import Slider from "react-slick";
 
 
-
 const HotCollections = () => {
+
+  render() ;
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
 
   const[products, showProducts] = useState([])
   
@@ -21,14 +29,7 @@ const HotCollections = () => {
     fetchProducts()
   }, [])
   
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  }
-  // does this work?
+
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
@@ -46,7 +47,6 @@ const HotCollections = () => {
                   <Link to="/item-details">
                     <img src={product.nftImage} className="lazy img-fluid" alt="" />
                   </Link>
-                  
                 </div>
                 <div className="nft_coll_pp">
                   <Link to="/author">

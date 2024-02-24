@@ -28,7 +28,7 @@ const HotCollections = () => {
     slidesToShow: 1,
     slidesToScroll: 1
   }
-  // does this work?
+  // does this work
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">

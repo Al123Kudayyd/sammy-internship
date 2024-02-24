@@ -27,8 +27,7 @@ const HotCollections = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1
-  }
-  // does this work?
+
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
@@ -46,7 +45,6 @@ const HotCollections = () => {
                   <Link to="/item-details">
                     <img src={product.nftImage} className="lazy img-fluid" alt="" />
                   </Link>
-                  
                 </div>
                 <div className="nft_coll_pp">
                   <Link to="/author">

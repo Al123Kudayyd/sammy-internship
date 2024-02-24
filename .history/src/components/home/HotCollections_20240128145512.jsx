@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AuthorImage from "../../images/author_thumbnail.jpg";
 import nftImage from "../../images/nftImage.jpg";
-import Slider from "react-slick";
-
+import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
 
 
 const HotCollections = () => {
@@ -20,15 +19,9 @@ const HotCollections = () => {
   useEffect(() => {
     fetchProducts()
   }, [])
+
   
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  }
-  // does this work?
+
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
@@ -40,13 +33,12 @@ const HotCollections = () => {
             </div>
           </div>
           {products.map((product) => (
-            <div  className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
               <div className="nft_coll">
                 <div className="nft_wrap">
                   <Link to="/item-details">
                     <img src={product.nftImage} className="lazy img-fluid" alt="" />
                   </Link>
-                  
                 </div>
                 <div className="nft_coll_pp">
                   <Link to="/author">
